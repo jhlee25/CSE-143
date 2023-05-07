@@ -1,0 +1,1664 @@
+
+<!-- saved from url=(0078)https://courses.cs.washington.edu/courses/cse143/20su/handouts/guitarhero.html -->
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns:m="http://schemas.microsoft.com/office/2004/12/omml" xmlns="http://www.w3.org/TR/REC-html40"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<meta name="ProgId" content="Word.Document">
+<meta name="Generator" content="Microsoft Word 15">
+<meta name="Originator" content="Microsoft Word 15">
+<link rel="File-List" href="https://courses.cs.washington.edu/courses/cse143/20su/handouts/guitarhero_files/filelist.xml">
+<link rel="Edit-Time-Data" href="https://courses.cs.washington.edu/courses/cse143/20su/handouts/guitarhero_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>CSE143 handout #3</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>reges</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>Stuart Reges</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>3967</o:TotalTime>
+  <o:LastPrinted>2019-04-10T00:22:00Z</o:LastPrinted>
+  <o:Created>2019-04-12T18:29:00Z</o:Created>
+  <o:LastSaved>2019-04-12T18:29:00Z</o:LastSaved>
+  <o:Pages>5</o:Pages>
+  <o:Words>2295</o:Words>
+  <o:Characters>11435</o:Characters>
+  <o:Company>CSE</o:Company>
+  <o:Lines>95</o:Lines>
+  <o:Paragraphs>27</o:Paragraphs>
+  <o:CharactersWithSpaces>13703</o:CharactersWithSpaces>
+  <o:Version>16.00</o:Version>
+ </o:DocumentProperties>
+ <o:OfficeDocumentSettings>
+  <o:TargetScreenSize>800x600</o:TargetScreenSize>
+ </o:OfficeDocumentSettings>
+</xml><![endif]-->
+<link rel="themeData" href="https://courses.cs.washington.edu/courses/cse143/20su/handouts/guitarhero_files/themedata.thmx">
+<link rel="colorSchemeMapping" href="https://courses.cs.washington.edu/courses/cse143/20su/handouts/guitarhero_files/colorschememapping.xml">
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:DrawingGridHorizontalSpacing>6 pt</w:DrawingGridHorizontalSpacing>
+  <w:DisplayHorizontalDrawingGridEvery>2</w:DisplayHorizontalDrawingGridEvery>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:UseWord2010TableStyleRules/>
+   <w:DontGrowAutofit/>
+   <w:DontUseIndentAsNumberingTabStop/>
+   <w:FELineBreak11/>
+   <w:WW11IndentRules/>
+   <w:DontAutofitConstrainedTables/>
+   <w:AutofitLikeWW11/>
+   <w:HangulWidthLikeWW11/>
+   <w:UseNormalStyleForList/>
+   <w:DontVertAlignCellWithSp/>
+   <w:DontBreakConstrainedForcedTables/>
+   <w:DontVertAlignInTxbx/>
+   <w:Word11KerningPairs/>
+   <w:CachedColBalance/>
+  </w:Compatibility>
+  <w:DoNotOptimizeForBrowser/>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="false"
+  DefSemiHidden="false" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="371">
+  <w:LsdException Locked="false" Priority="0" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 9"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 9"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footnote text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="header"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footer"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index heading"/>
+  <w:LsdException Locked="false" Priority="35" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="table of figures"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="envelope address"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="envelope return"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footnote reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="line number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="page number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="endnote reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="endnote text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="table of authorities"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="macro"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="toa heading"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 5"/>
+  <w:LsdException Locked="false" Priority="10" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Closing"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Signature"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="true"
+   UnhideWhenUsed="true" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Message Header"/>
+  <w:LsdException Locked="false" Priority="11" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Salutation"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Date"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text First Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text First Indent 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Note Heading"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Block Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Hyperlink"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="FollowedHyperlink"/>
+  <w:LsdException Locked="false" Priority="22" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Document Map"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Plain Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="E-mail Signature"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Top of Form"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Bottom of Form"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal (Web)"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Acronym"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Address"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Cite"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Code"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Definition"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Keyboard"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Preformatted"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Sample"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Typewriter"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Variable"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal Table"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation subject"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="No List"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Contemporary"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Elegant"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Professional"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Subtle 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Subtle 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Balloon Text"/>
+  <w:LsdException Locked="false" Priority="59" Name="Table Grid"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Theme"/>
+  <w:LsdException Locked="false" Priority="67" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="68" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="69" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="70" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="71" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="72" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="73" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="60" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="61" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="62" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="65" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="34" QFormat="true"
+   Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="29" QFormat="true"
+   Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="30" QFormat="true"
+   Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="66" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="72" QFormat="true"
+   Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="73" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="60" QFormat="true"
+   Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="61" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="66" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" QFormat="true"
+   Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="21" QFormat="true"
+   Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="31" QFormat="true"
+   Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="32" QFormat="true"
+   Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="33" QFormat="true"
+   Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="37" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="39" QFormat="true"
+   Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" QFormat="true"
+   Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" QFormat="true"
+   Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" QFormat="true"
+   Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" QFormat="true"
+   Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" SemiHidden="true"
+   UnhideWhenUsed="true" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="TOC Heading"/>
+  <w:LsdException Locked="false" Priority="41" Name="Plain Table 1"/>
+  <w:LsdException Locked="false" Priority="42" Name="Plain Table 2"/>
+  <w:LsdException Locked="false" Priority="43" Name="Plain Table 3"/>
+  <w:LsdException Locked="false" Priority="44" Name="Plain Table 4"/>
+  <w:LsdException Locked="false" Priority="45" Name="Plain Table 5"/>
+  <w:LsdException Locked="false" Priority="40" Name="Grid Table Light"/>
+  <w:LsdException Locked="false" Priority="46" Name="Grid Table 1 Light"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark"/>
+  <w:LsdException Locked="false" Priority="51" Name="Grid Table 6 Colorful"/>
+  <w:LsdException Locked="false" Priority="52" Name="Grid Table 7 Colorful"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 1"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 1"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 1"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 2"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 2"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 2"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 3"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 3"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 3"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 4"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 4"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 5"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 5"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 5"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 6"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 6"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 6"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="46" Name="List Table 1 Light"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark"/>
+  <w:LsdException Locked="false" Priority="51" Name="List Table 6 Colorful"/>
+  <w:LsdException Locked="false" Priority="52" Name="List Table 7 Colorful"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 1"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 1"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 1"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 2"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 2"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 2"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 3"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 3"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 3"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 4"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 4"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 5"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 5"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 5"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 6"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 6"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 6"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 6"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:"MS Gothic";
+	panose-1:2 11 6 9 7 2 5 8 2 4;
+	mso-font-alt:"\FF2D\FF33 \30B4\30B7\30C3\30AF";
+	mso-font-charset:128;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-536870145 1791491579 134217746 0 131231 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-536869121 1107305727 33554432 0 415 0;}
+@font-face
+	{font-family:"\@MS Gothic";
+	panose-1:2 11 6 9 7 2 5 8 2 4;
+	mso-font-charset:128;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-536870145 1791491579 134217746 0 131231 0;}
+@font-face
+	{font-family:Times;
+	panose-1:2 2 6 3 5 4 5 2 3 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-536858881 -1073711013 9 0 511 0;}
+@font-face
+	{font-family:"Lucida Grande";
+	mso-font-alt:Arial;
+	mso-font-charset:0;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 1342218751 0 0 447 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	mso-style-parent:"";
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	color:#954F72;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoPlainText, li.MsoPlainText, div.MsoPlainText
+	{mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-link:"Plain Text Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-link:"Balloon Text Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:9.0pt;
+	font-family:"Lucida Grande";
+	mso-fareast-font-family:"Times New Roman";}
+span.BalloonTextChar
+	{mso-style-name:"Balloon Text Char";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-parent:"";
+	mso-style-link:"Balloon Text";
+	mso-ansi-font-size:9.0pt;
+	mso-bidi-font-size:9.0pt;
+	font-family:"Lucida Grande";
+	mso-ascii-font-family:"Lucida Grande";
+	mso-hansi-font-family:"Lucida Grande";
+	mso-bidi-font-family:"Lucida Grande";}
+span.PlainTextChar
+	{mso-style-name:"Plain Text Char";
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-parent:"";
+	mso-style-link:"Plain Text";
+	font-family:"Courier New";
+	mso-ascii-font-family:"Courier New";
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:.5in .5in .5in .5in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:-227;
+	mso-list-template-ids:536872532;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:"";
+	mso-level-tab-stop:0in;
+	mso-level-number-position:left;
+	margin-left:0in;
+	text-indent:0in;
+	font-family:Symbol;}
+@list l0:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l0:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	margin-left:1.25in;
+	text-indent:-.25in;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l0:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	margin-left:1.75in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l0:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0FA;
+	mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	margin-left:2.25in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l0:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	margin-left:2.75in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l0:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	margin-left:3.25in;
+	text-indent:-.25in;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l0:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	margin-left:3.75in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l0:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0FA;
+	mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	margin-left:4.25in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l1
+	{mso-list-id:1823741175;
+	mso-list-type:hybrid;
+	mso-list-template-ids:2067070878 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l1:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l1:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l1:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l1:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l1:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l1:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l1:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l1:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman",serif;}
+table.MsoTableGrid
+	{mso-style-name:"Table Grid";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-unhide:no;
+	border:solid windowtext 1.0pt;
+	mso-border-alt:solid windowtext .5pt;
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-border-insideh:.5pt solid windowtext;
+	mso-border-insidev:.5pt solid windowtext;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman",serif;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang="EN-US" link="blue" vlink="#954F72" style="tab-interval:.5in">
+
+<div class="WordSection1">
+
+<p class="MsoNormal" align="right" style="text-align:right"><span class="GramE">handout</span>
+#3</p>
+
+<p class="MsoNormal" align="center" style="text-align:center"><b style="mso-bidi-font-weight:
+normal"><span style="font-size:18.0pt">CSE143—Computer Programming II<o:p></o:p></span></b></p>
+
+<p class="MsoNormal" align="center" style="text-align:center"><b style="mso-bidi-font-weight:
+normal"><span style="font-size:18.0pt">Programming Assignment #2<o:p></o:p></span></b></p>
+
+<p class="MsoNormal" align="center" style="text-align:center"><span class="GramE"><b style="mso-bidi-font-weight:normal"><span style="font-size:18.0pt">due</span></b></span><b style="mso-bidi-font-weight:normal"><span style="font-size:18.0pt">: Thursday, 7/9/20,
+11 pm AoE<o:p></o:p></span></b></p>
+
+<p class="MsoNormal" align="center" style="text-align:center"><span class="GramE"><i style="mso-bidi-font-style:normal">many</i></span><i style="mso-bidi-font-style:
+normal"> thanks to Kevin Wayne for this nifty assignment<o:p></o:p></i></p>
+
+<p class="MsoPlainText" style="margin-top:12.0pt"><span style="font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;,serif">This programming assignment will give you
+practice with queues, interfaces, objects, and arrays of objects.<span style="mso-spacerun:yes">&nbsp; </span>You are going to implement two classes that
+allow us to simulate a guitar.<span style="mso-spacerun:yes">&nbsp; </span>We will
+be using two utility classes known as StdAudio and StdDraw that are used in the
+Princeton intro CS course.<span style="mso-spacerun:yes">&nbsp; </span>You don’t
+have to understand the details of these utility classes, but if you are
+interested, you can read about them at the following <span class="GramE">url</span>:<o:p></o:p></span></p>
+
+<p class="MsoPlainText" style="margin-top:12.0pt;margin-right:0in;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt"><a href="http://introcs.cs.princeton.edu/java/stdlib/"><span style="font-size:
+12.0pt;font-family:&quot;Times New Roman&quot;,serif">http://introcs.cs.princeton.edu/java/stdlib/</span></a><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,serif"><o:p></o:p></span></p>
+
+<p class="MsoPlainText" style="margin-top:12.0pt"><span style="font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;,serif">When a guitar string is plucked, the
+string vibrates and creates sound. The length of the string determines its
+fundamental frequency of vibration. We model a guitar string by sampling its
+displacement (a real number between -1/2 and +1/2) at N equally spaced points
+(in time), where N equals the sampling rate (44,100) divided by the fundamental
+frequency (rounded to the nearest integer).<span style="mso-spacerun:yes">&nbsp;
+</span>We store these displacement values in a structure that we will refer to
+as a ring buffer.<o:p></o:p></span></p>
+
+<p class="MsoPlainText" style="margin-top:12.0pt"><span style="mso-no-proof:yes"><!--[if gte vml 1]><v:shapetype
+ id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+ path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="Picture_x0020_1" o:spid="_x0000_i1025" type="#_x0000_t75"
+ alt="ampling from Karplus-Strong" style='width:543.75pt;height:72.75pt;
+ visibility:visible'>
+ <v:imagedata src="guitarhero_files/image001.png" o:title="ampling from Karplus-Strong"/>
+</v:shape><![endif]--><!--[if !vml]--><img border="0" width="725" height="97" src="./guitarhero_files/image002.jpg" alt="ampling from Karplus-Strong" v:shapes="Picture_x0020_1"><!--[endif]--></span><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,serif"><o:p></o:p></span></p>
+
+<p class="MsoPlainText" style="margin-top:12.0pt"><b style="mso-bidi-font-weight:
+normal"><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,serif">Plucking
+the string</span></b><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,serif"><o:p></o:p></span></p>
+
+<p class="MsoPlainText"><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,serif">The
+excitation of the string can contain energy at any frequency. We simulate the
+excitation by filling the ring buffer with white noise: set each of the N
+sample displacements to a random real number between -1/2 and +1/2.<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:10.0pt;font-family:&quot;Times&quot;,serif;
+mso-bidi-font-family:&quot;Times New Roman&quot;;mso-no-proof:yes"><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_5" o:spid="_x0000_i1026" type="#_x0000_t75" alt="hite noise"
+ style='width:547.5pt;height:60pt;visibility:visible'>
+ <v:imagedata src="guitarhero_files/image003.png" o:title="hite noise"/>
+</v:shape><![endif]--><!--[if !vml]--><img border="0" width="730" height="80" src="./guitarhero_files/image004.gif" alt="hite noise" v:shapes="Picture_x0020_5"><!--[endif]--></span><span style="font-size:10.0pt;font-family:&quot;Times&quot;,serif;mso-bidi-font-family:&quot;Times New Roman&quot;"><o:p></o:p></span></p>
+
+<p class="MsoPlainText" style="margin-top:12.0pt"><b style="mso-bidi-font-weight:
+normal"><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,serif">The
+resulting vibrations<o:p></o:p></span></b></p>
+
+<p class="MsoPlainText"><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,serif">After
+the string is plucked, the string vibrates. The pluck causes a displacement
+which spreads wave-like over time. The Karplus-Strong algorithm simulates this
+vibration by maintaining a ring buffer of the N samples: for each step the
+algorithm deletes the first sample from the ring buffer and adds to the end of
+the ring buffer the average of the first two samples, scaled by an energy decay
+factor of 0.996.<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:10.0pt;font-family:&quot;Times&quot;,serif;
+mso-bidi-font-family:&quot;Times New Roman&quot;;mso-no-proof:yes"><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_8" o:spid="_x0000_i1027" type="#_x0000_t75" alt="he Karplus-Strong update"
+ style='width:477.75pt;height:147pt;visibility:visible'>
+ <v:imagedata src="guitarhero_files/image005.png" o:title="he Karplus-Strong update"/>
+</v:shape><![endif]--><!--[if !vml]--><img border="0" width="637" height="196" src="./guitarhero_files/image006.jpg" alt="he Karplus-Strong update" v:shapes="Picture_x0020_8"><!--[endif]--></span><span style="font-size:10.0pt;font-family:&quot;Times&quot;,serif;mso-bidi-font-family:&quot;Times New Roman&quot;"><o:p></o:p></span></p>
+
+<p class="MsoPlainText" style="margin-top:12.0pt"><b style="mso-bidi-font-weight:
+normal"><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,serif">Why
+it works<o:p></o:p></span></b></p>
+
+<p class="MsoPlainText"><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,serif">The
+two primary components that make the Karplus-Strong algorithm work are the ring
+buffer feedback mechanism and the averaging operation.<o:p></o:p></span></p>
+
+<p class="MsoPlainText" style="margin-top:12.0pt;margin-right:0in;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;text-indent:-.25in;mso-list:l1 level1 lfo2"><!--[if !supportLists]--><span style="font-size:12.0pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,serif">The
+ring buffer feedback mechanism: The ring buffer models the medium (a string
+tied down at both ends) in which the energy travels back and forth. The length
+of the ring buffer determines the fundamental frequency of the resulting sound.
+Sonically, the feedback mechanism reinforces only the fundamental frequency and
+its harmonics (frequencies at integer multiples of the fundamental). The energy
+decay factor (.996 in this case) models the slight dissipation in energy as the
+wave makes a roundtrip through the string.<o:p></o:p></span></p>
+
+<p class="MsoPlainText" style="margin-top:12.0pt;margin-right:0in;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;text-indent:-.25in;mso-list:l1 level1 lfo2"><!--[if !supportLists]--><span style="font-size:12.0pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,serif">The
+averaging operation: The averaging operation serves as a gentle low pass filter
+(which removes higher frequencies while allowing lower frequencies to pass,
+hence the name). Because it is in the path of the feedback, this has the effect
+of gradually attenuating the higher harmonics while keeping the lower ones,
+which corresponds closely with how actually plucked strings sound.<o:p></o:p></span></p>
+
+<p class="MsoPlainText" style="margin-top:12.0pt"><b style="mso-bidi-font-weight:
+normal"><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,serif">Part
+1: GuitarString Class<o:p></o:p></span></b></p>
+
+<p class="MsoPlainText" style="margin-bottom:12.0pt"><span style="font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;,serif">In the first part of the assignment, you
+will implement a class called GuitarString that models a vibrating guitar
+string of a given frequency.<span style="mso-spacerun:yes">&nbsp; </span>The
+GuitarString object will need to keep track of a ring buffer.<span style="mso-spacerun:yes">&nbsp; </span>You are to implement the ring buffer as a
+queue using the Queue&lt;E&gt; interface and the LinkedList&lt;E&gt;
+implementation.<span style="mso-spacerun:yes">&nbsp; </span>You are limited to the
+queue methods in Table 14.2 on page 888 of the textbook (add, remove, isEmpty,
+size, and peek).<span style="mso-spacerun:yes">&nbsp; </span>You are not allowed to
+use other data structures or other queue methods to solve this problem.<o:p></o:p></span></p>
+
+<p class="MsoPlainText" style="margin-bottom:12.0pt"><span style="font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;,serif">Your class should have the following
+public methods.<o:p></o:p></span></p>
+
+<div align="center">
+
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:480;mso-padding-alt:0in 5.4pt 0in 5.4pt;mso-border-insideh:
+ .5pt solid windowtext;mso-border-insidev:.5pt solid windowtext">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td width="220" valign="top" style="width:166.55pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+  <p class="MsoPlainText" style="margin-top:2.0pt;margin-right:0in;margin-bottom:
+  2.0pt;margin-left:0in"><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,serif">Method<o:p></o:p></span></p>
+  </td>
+  <td width="487" valign="top" style="width:373.5pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+  <p class="MsoPlainText" style="margin-top:2.0pt;margin-right:0in;margin-bottom:
+  2.0pt;margin-left:0in"><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,serif">Description<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1">
+  <td width="220" valign="top" style="width:166.55pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+  <p class="MsoPlainText" style="margin-top:2.0pt;margin-right:0in;margin-bottom:
+  2.0pt;margin-left:0in"><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,serif">GuitarString(double
+  frequency)<o:p></o:p></span></p>
+  </td>
+  <td width="487" valign="top" style="width:373.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+  <p class="MsoPlainText" style="margin-top:2.0pt;margin-right:0in;margin-bottom:
+  2.0pt;margin-left:0in"><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,serif">Constructs
+  a guitar string of the given frequency.<span style="mso-spacerun:yes">&nbsp;
+  </span>It creates a ring buffer of the desired capacity N (sampling rate
+  divided by frequency, rounded to the nearest integer), and initializes it to
+  represent a guitar string at rest by enqueueing N zeros. <span style="mso-spacerun:yes">&nbsp;</span>The sampling rate is specified by the
+  constant StdAudio.SAMPLE_RATE.<span style="mso-spacerun:yes">&nbsp; </span>If the
+  frequency is less than or equal to 0 or if the resulting size of the ring
+  buffer would be less than 2, your method should throw an
+  IllegalArgumentException.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:2">
+  <td width="220" valign="top" style="width:166.55pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+  <p class="MsoPlainText" style="margin-top:2.0pt;margin-right:0in;margin-bottom:
+  2.0pt;margin-left:0in"><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,serif">GuitarString(double[]
+  init)<o:p></o:p></span></p>
+  </td>
+  <td width="487" valign="top" style="width:373.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+  <p class="MsoPlainText" style="margin-top:2.0pt;margin-right:0in;margin-bottom:
+  2.0pt;margin-left:0in"><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,serif">Constructs
+  a guitar string and initializes the contents of the ring buffer to the values
+  in the array.<span style="mso-spacerun:yes">&nbsp; </span>If the array has fewer
+  than two elements, your constructor should throw an
+  IllegalArgumentException.<span style="mso-spacerun:yes">&nbsp; </span>This
+  constructor is used only for testing purposes.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:3">
+  <td width="220" valign="top" style="width:166.55pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+  <p class="MsoPlainText" style="margin-top:2.0pt;margin-right:0in;margin-bottom:
+  2.0pt;margin-left:0in"><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,serif">void
+  pluck()<o:p></o:p></span></p>
+  </td>
+  <td width="487" valign="top" style="width:373.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+  <p class="MsoPlainText" style="margin-top:2.0pt;margin-right:0in;margin-bottom:
+  2.0pt;margin-left:0in"><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,serif">This
+  method should replace the N elements in the ring buffer with N random values
+  between -0.5 inclusive and +0.5 exclusive (i.e. -0.5 &lt;= value &lt; 0.5).<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:4">
+  <td width="220" valign="top" style="width:166.55pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+  <p class="MsoPlainText" style="margin-top:2.0pt;margin-right:0in;margin-bottom:
+  2.0pt;margin-left:0in"><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,serif">void
+  tic()<o:p></o:p></span></p>
+  </td>
+  <td width="487" valign="top" style="width:373.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+  <p class="MsoPlainText" style="margin-top:2.0pt;margin-right:0in;margin-bottom:
+  2.0pt;margin-left:0in"><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,serif">This
+  method should apply the Karplus-Strong update once (performing one step).<span style="mso-spacerun:yes">&nbsp; </span>It should delete the sample at the front of
+  the ring buffer and add to the end of the ring buffer the average of the
+  first two samples, multiplied by the energy decay factor (0.996).<span style="mso-spacerun:yes">&nbsp; </span>Your class should include a public constant
+  for the energy decay factor.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:5;mso-yfti-lastrow:yes">
+  <td width="220" valign="top" style="width:166.55pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+  <p class="MsoPlainText" style="margin-top:2.0pt;margin-right:0in;margin-bottom:
+  2.0pt;margin-left:0in"><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,serif">double
+  sample()<o:p></o:p></span></p>
+  </td>
+  <td width="487" valign="top" style="width:373.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+  <p class="MsoPlainText" style="margin-top:2.0pt;margin-right:0in;margin-bottom:
+  2.0pt;margin-left:0in"><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,serif">This
+  method should return the current sample (the value at the front of the ring
+  buffer).<o:p></o:p></span></p>
+  </td>
+ </tr>
+</tbody></table>
+
+</div>
+
+<p class="MsoPlainText" style="margin-top:12.0pt"><span style="font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;,serif">You will be provided with a testing
+program that you can use to verify that your class has the basic functionality
+that is required.<span style="mso-spacerun:yes">&nbsp; </span>The testing program
+will not check to make sure that you are using a queue and that you are
+checking for appropriate exceptions to throw and that you are using the queue
+efficiently.<o:p></o:p></span></p>
+
+<p class="MsoPlainText" style="margin-top:12.0pt"><span style="font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;,serif">It is difficult in commenting the
+GuitarString class to know what constitutes an implementation detail and what
+is okay to discuss in client comments.<span style="mso-spacerun:yes">&nbsp;
+</span>
+Assume that a client of the GuitarString class is familiar with the
+concept of a ring buffer and the Karplus-Strong algorithm.<span style="mso-spacerun:yes">&nbsp; </span>The fact that we are implementing it as a queue
+is an implementation detail.<span style="mso-spacerun:yes">&nbsp; </span>So don’t
+mention how you implement the ring buffer.<span style="mso-spacerun:yes">&nbsp;
+</span>But you can discuss the ring buffer itself and the changes that your
+methods make to the state of the ring buffer (e.g., moving values from the
+front to the back of the ring buffer).<o:p></o:p></span></p>
+
+<p class="MsoPlainText" style="margin-top:12.0pt"><span style="font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;,serif">Normally we would encourage you to write a
+single constructor and to use the “<span class="GramE">this(</span>…)” notation
+to have one constructor call another.<span style="mso-spacerun:yes">&nbsp;
+</span>That won’t be possible for the GuitarString class because the two
+constructors are completely different.<o:p></o:p></span></p>
+
+<p class="MsoPlainText" style="margin-top:12.0pt"><span style="font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;,serif">Because you are using Java’s queue
+structure to implement the GuitarString, you will need to include this import
+declaration at the beginning of the class:<o:p></o:p></span></p>
+
+<p class="MsoPlainText" style="margin-top:12.0pt;margin-right:0in;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt"><span class="GramE">import</span>
+java.util.*;</p>
+
+<p class="MsoPlainText" style="margin-top:12.0pt"><b style="mso-bidi-font-weight:
+normal"><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,serif">Part
+2: Guitar37 Class<o:p></o:p></span></b></p>
+
+<p class="MsoPlainText"><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,serif">In
+the second part of the assignment, you are going to build on the GuitarString
+class to write a class that keeps track of a musical instrument with multiple
+strings.<span style="mso-spacerun:yes">&nbsp; </span>There could be many possible
+guitar objects with different kinds of strings.<span style="mso-spacerun:yes">&nbsp;
+</span>As a result, we introduce an interface known as Guitar that each guitar
+object implements.<o:p></o:p></span></p>
+
+<p class="MsoPlainText" style="margin-top:12.0pt"><span style="font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;,serif">The Guitar interface is defined as
+follows:<o:p></o:p></span></p>
+
+<p class="MsoPlainText" style="margin-top:12.0pt;margin-right:0in;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt"><span class="GramE">public</span>
+interface Guitar {</p>
+
+<p class="MsoPlainText" style="margin-left:.5in"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span class="GramE">public</span> void
+playNote(int pitch);</p>
+
+<p class="MsoPlainText"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="GramE">public</span> boolean
+hasString(char key);</p>
+
+<p class="MsoPlainText" style="margin-left:.5in"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span class="GramE">public</span> void
+pluck(char key);</p>
+
+<p class="MsoPlainText" style="margin-left:.5in"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span class="GramE">public</span> double
+sample();</p>
+
+<p class="MsoPlainText" style="margin-left:.5in"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span class="GramE">public</span> void tic();</p>
+
+<p class="MsoPlainText" style="margin-left:.5in"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span><span class="GramE">public</span> int time();</p>
+
+<p class="MsoPlainText" style="margin-left:.5in">}</p>
+
+<p class="MsoPlainText" style="margin-top:12.0pt"><span style="font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;,serif">The interface allows a client to specify
+what to play in one of two ways.<span style="mso-spacerun:yes">&nbsp; </span>A
+client can specify exactly which note to play by calling the playNote method
+passing it a pitch. <span style="mso-spacerun:yes">&nbsp;</span>Pitch is specified
+as an integer where the value 0 represents concert-A and all other notes are
+specified relative to concert-A using what is known as a chromatic scale.<span style="mso-spacerun:yes">&nbsp; </span>Not every value of pitch can be played by any
+given guitar.<span style="mso-spacerun:yes">&nbsp; </span>If it can’t be played, it
+is ignored.<o:p></o:p></span></p>
+
+<p class="MsoPlainText" style="margin-top:12.0pt"><span style="font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;,serif">A client can also specify a character that
+indicates which note to play by calling the pluck method.<span style="mso-spacerun:yes">&nbsp; </span>Different guitar objects will have different
+mappings from characters to notes.<span style="mso-spacerun:yes">&nbsp; </span>The
+interface includes a method called hasString that is paired with pluck that
+lets a client verify that a particular character has a corresponding string for
+this guitar.<span style="mso-spacerun:yes">&nbsp; </span>The pluck method has a
+precondition that the key is legal for this guitar.<o:p></o:p></span></p>
+
+<p class="MsoPlainText" style="margin-top:12.0pt"><span style="font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;,serif">The Guitar interface also has methods for
+getting the current sound sample (the sum of all samples from the strings of
+the guitar), to advance the time forward one “tic,” and an optional method for
+determining the current time (the number of times tic has been called).<span style="mso-spacerun:yes">&nbsp; </span>If the time method is not implemented, it
+returns -1.<span style="mso-spacerun:yes">&nbsp; </span>You should implement the 
+time method in Guitar37.<o:p></o:p></span></p>
+
+<p class="MsoPlainText" style="margin-top:12.0pt"><span style="font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;,serif">You are being provided with a sample class
+called GuitarLite that implements the Guitar interface.<span style="mso-spacerun:yes">&nbsp; </span>Once you have verified that your GuitarString
+class passes the testing program, you can play the GuitarLite instrument.<span style="mso-spacerun:yes">&nbsp; </span>It has only two strings: <span class="GramE">a
+and</span> c.<span style="mso-spacerun:yes">&nbsp; </span>Keep in mind that
+GuitarLite does not have a main method.<span style="mso-spacerun:yes">&nbsp;
+</span>There is a separate class called GuitarHero that has main (the initial
+version constructs a GuitarLite object).<o:p></o:p></span></p>
+
+<p class="MsoPlainText" style="margin-top:12.0pt"><span style="font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;,serif">In this second part of the assignment,
+your task is to make a variation of GuitarLite known as Guitar37.<span style="mso-spacerun:yes">&nbsp; </span>It will model a guitar with 37 different
+strings.<span style="mso-spacerun:yes">&nbsp; </span>Because it has so many strings,
+we will want to keep track of them in a data structure.<span style="mso-spacerun:yes">&nbsp; </span>Your Guitar37 objects should each keep track
+of an array of 37 GuitarString objects.<o:p></o:p></span></p>
+
+<p class="MsoPlainText" style="margin-top:12.0pt"><span style="font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;,serif">The Guitar37 class has a total of 37 notes
+on the chromatic scale from 110Hz to 880Hz. <span style="mso-spacerun:yes">&nbsp;</span>We will use the following string to map keys
+typed by the user to positions in your array of stri<a name="_GoBack"></a>ngs.<span style="mso-spacerun:yes">&nbsp; </span><span class="GramE">The i</span>-th character
+of this string should correspond to the i-th character of your array:<o:p></o:p></span></p>
+
+<p class="MsoPlainText" style="margin-top:12.0pt;margin-right:0in;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt">"<span class="GramE">q2we4r5ty7u8i9op-</span>[=zxdcfvgbnjmk,.;/'
+"</p>
+
+<p class="MsoPlainText" style="margin-top:12.0pt"><span style="font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;,serif">This use of keyboard characters imitates a
+piano keyboard, making playing songs a little easier for people used to a piano
+keyboard. The white keys are on the <span class="GramE">qwerty</span> and zxcv
+rows and the black keys on the 12345 and asdf rows of the keyboard, as in the
+drawing below.<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:10.0pt;font-family:&quot;Times&quot;,serif;
+mso-bidi-font-family:&quot;Times New Roman&quot;;mso-no-proof:yes"><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_11" o:spid="_x0000_i1028" type="#_x0000_t75" alt="iano keyboard"
+ style='width:186.75pt;height:271.5pt;visibility:visible'>
+ <v:imagedata src="guitarhero_files/image007.jpg" o:title="iano keyboard"/>
+</v:shape><![endif]--><!--[if !vml]--><img border="0" width="249" height="362" src="./guitarhero_files/image008.jpg" alt="iano keyboard" v:shapes="Picture_x0020_11"><!--[endif]--></span><span style="font-size:10.0pt;font-family:&quot;Times&quot;,serif;mso-bidi-font-family:&quot;Times New Roman&quot;"><o:p></o:p></span></p>
+
+<p class="MsoPlainText" style="margin-top:12.0pt"><span style="font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;,serif">You are being provided a skeleton version
+of the Guitar37 class that includes this string defined as a constant called
+KEYBOARD.<span style="mso-spacerun:yes">&nbsp; </span>The i-th character of the
+string corresponds to a frequency of 440 × 2<sup>(i - 24) / 12</sup>, so that
+the character “q” is 110Hz, “i” is 220Hz, “v” is 440Hz, and <span class="GramE">“
+”</span> (space) is 880Hz.<o:p></o:p></span></p>
+
+<p class="MsoPlainText" style="margin-top:12.0pt;margin-right:0in;margin-bottom:
+12.0pt;margin-left:0in"><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,serif">As
+noted above, a pitch of 0 is supposed to correspond to concert-A, which will be
+at index 24 for the Guitar37 object (corresponding to the character “v”). Thus,
+you can convert from a pitch value to an index in your string by adding 24 to
+the pitch value.<span style="mso-spacerun:yes">&nbsp; </span>The table below shows
+some examples of this conversion.<o:p></o:p></span></p>
+
+<div align="center">
+
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:1184;mso-padding-alt:0in 5.4pt 0in 5.4pt;mso-border-insideh:
+ .5pt solid windowtext;mso-border-insidev:.5pt solid windowtext">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td valign="top" style="border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+  <p class="MsoPlainText" align="center" style="text-align:center"><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,serif">Key<o:p></o:p></span></p>
+  </td>
+  <td valign="top" style="border:solid windowtext 1.0pt;border-left:none;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+  <p class="MsoPlainText" align="center" style="text-align:center"><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,serif">Pitch<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1">
+  <td valign="top" style="border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><span style="font-family:&quot;Courier New&quot;">"q"<o:p></o:p></span></p>
+  </td>
+  <td valign="top" style="border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center">-24</p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:2">
+  <td valign="top" style="border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><span style="font-family:&quot;Courier New&quot;">"2"<o:p></o:p></span></p>
+  </td>
+  <td valign="top" style="border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center">-23</p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:3">
+  <td valign="top" style="border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><span style="font-family:&quot;Courier New&quot;">"w"<o:p></o:p></span></p>
+  </td>
+  <td valign="top" style="border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center">-22</p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:4">
+  <td valign="top" style="border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><span style="font-family:&quot;Courier New&quot;">"e"<o:p></o:p></span></p>
+  </td>
+  <td valign="top" style="border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center">-21</p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:5">
+  <td valign="top" style="border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center">...</p>
+  </td>
+  <td valign="top" style="border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center">...</p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:6">
+  <td valign="top" style="border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><span style="font-family:&quot;Courier New&quot;">"v"<o:p></o:p></span></p>
+  </td>
+  <td valign="top" style="border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center">0</p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:7">
+  <td valign="top" style="border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center">...</p>
+  </td>
+  <td valign="top" style="border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center">...</p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:8">
+  <td valign="top" style="border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><span style="font-family:&quot;Courier New&quot;">"/"<o:p></o:p></span></p>
+  </td>
+  <td valign="top" style="border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center">10</p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:9">
+  <td valign="top" style="border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><span style="font-family:&quot;Courier New&quot;">"'"<o:p></o:p></span></p>
+  </td>
+  <td valign="top" style="border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center">11</p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:10;mso-yfti-lastrow:yes">
+  <td valign="top" style="border:solid windowtext 1.0pt;border-top:none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center"><span style="font-family:&quot;Courier New&quot;">" "<o:p></o:p></span></p>
+  </td>
+  <td valign="top" style="border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;
+  mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+  <p class="MsoNormal" align="center" style="text-align:center">12</p>
+  </td>
+ </tr>
+</tbody></table>
+
+</div>
+
+<p class="MsoPlainText" style="margin-top:12.0pt"><span style="font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;,serif">In working on this second part of the
+assignment, you are generalizing the code that you will find in
+GuitarLite.<span style="mso-spacerun:yes">&nbsp; </span>Because that instrument has
+just two strings, it uses two separate fields.<span style="mso-spacerun:yes">&nbsp;
+</span>Your instrument has 37 strings, so it uses an array of strings.<span style="mso-spacerun:yes">&nbsp; </span>Each of the operations defined in the
+interface needs to be generalized from using two specific strings to using an
+array of strings.<span style="mso-spacerun:yes">&nbsp; </span>For example, the sample
+method returns the sum of the current samples.<span style="mso-spacerun:yes">&nbsp;
+</span>GuitarLite does this by adding together two numbers.<span style="mso-spacerun:yes">&nbsp; </span>Your version will have to use a loop to find
+the sum of all 37 samples.<o:p></o:p></span></p>
+
+<p class="MsoPlainText" style="margin-top:12.0pt"><span style="font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;,serif">The GuitarLite class is not well
+documented and does not handle illegal keys.<span style="mso-spacerun:yes">&nbsp;
+</span>Your Guitar37 class should include complete comments.<span style="mso-spacerun:yes">&nbsp; </span>The pluck method should throw an
+IllegalArgumentException if the key is not one of the 37 keys it is designed to
+play (as noted above, this differs from the playNote method that simply ignores
+notes it <span class="GramE">cant</span> play). <span style="mso-spacerun:yes">&nbsp;</span>Recall that strings have an indexOf method
+that you might find helpful.<o:p></o:p></span></p>
+
+<p class="MsoPlainText" style="margin-top:12.0pt"><span style="font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;,serif">As noted in the description of the interface,
+the method called time is optional.<span style="mso-spacerun:yes">&nbsp; </span>It
+is not implemented in the GuitarLite class, but you should implement it in the
+Guitar37 class.<o:p></o:p></span></p>
+
+<p class="MsoPlainText" style="margin-top:12.0pt"><span style="font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;,serif">In order to run the program, you will have
+to have the files StdAudio.java and StdDraw.java in the same folder as your other
+class files.<span style="mso-spacerun:yes">&nbsp; </span>Remember that the main
+method runs indefinitely.<span style="mso-spacerun:yes">&nbsp; </span>As
+demonstrated in lecture, you can select a quit option from the GuitarHero
+window that pops up or you can use the End command in jGRASP.<o:p></o:p></span></p>
+
+<p class="MsoPlainText" style="margin-top:12.0pt"><span style="font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;,serif">As mentioned earlier, the ring buffer in
+your GuitarString class should be implemented as a queue.<span style="mso-spacerun:yes">&nbsp; </span>You are allowed to use any of the methods
+defined in the Queue interface.<span style="mso-spacerun:yes">&nbsp; </span>In
+particular, you are allowed to use the peek method that allows you to examine
+the value at the front of the queue without removing it.<span style="mso-spacerun:yes">&nbsp; </span>The GuitarString class would be inefficient
+if you didn’t have the ability to peek at the front of the queue.<o:p></o:p></span></p>
+
+<p class="MsoPlainText" style="margin-top:12.0pt"><span style="font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;,serif">To generate random real numbers, you can construct a Random object and
+call its nextDouble method.<span style="mso-spacerun:yes">&nbsp; </span>This will
+return a random real value n such that 0 </span><span style="font-family:&quot;MS Gothic&quot;;
+color:black">&#8804; </span><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,serif">n
+</span><span style="font-family:&quot;MS Gothic&quot;;color:black">&lt; </span><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,serif">1.<o:p></o:p></span></p>
+
+<p class="MsoPlainText" style="margin-top:12.0pt"><span style="font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;,serif">You will be given a testing program for
+Guitar37 as well called TestGuitar37.<span style="mso-spacerun:yes">&nbsp; </span>This
+testing code should be stored in a separate directory from your solution
+because it includes a custom version of the GuitarString class and you don’t
+want to accidentally overwrite your version of the class.<span style="mso-spacerun:yes">&nbsp; </span>You should copy your Guitar37 class to this
+folder, run it, and then compare against the sample output produced using the
+output comparison tool.<o:p></o:p></span></p>
+
+<p class="MsoPlainText" style="margin-top:12.0pt"><span style="font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;,serif">In terms of correctness, your class must
+provide all of the functionality described above and must satisfy all of the
+constraints mentioned in this writeup.<span style="mso-spacerun:yes">&nbsp;
+</span>In terms of style, we will be grading on your use of comments, good
+variable names, consistent indentation, minimal fields and good coding style to
+implement these operations.<o:p></o:p></span></p>
+
+<p class="MsoPlainText" style="margin-top:12.0pt"><span style="font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;,serif">It is likely that you will make a mistake
+somewhere in specifying your generic structures.<span style="mso-spacerun:yes">&nbsp; </span>When you do so, the Java compiler will warn
+you that you have “unchecked or unsafe operations” in your program.<span style="mso-spacerun:yes">&nbsp; </span>You will lose style points if you don’t fix
+these warnings.<span style="mso-spacerun:yes">&nbsp; </span>You can have jGRASP show
+you the exact line by going to: Settings/Compiler Settings/Workspace/Flags/Args
+and then uncheck the box next to "Compile" and type in:<o:p></o:p></span></p>
+
+<p class="MsoPlainText" style="margin-top:12.0pt;margin-right:0in;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt">-Xlint<span class="GramE">:unchecked</span></p>
+
+<p class="MsoPlainText" style="margin-top:12.0pt"><span style="font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;,serif">You should name your files
+GuitarString.java and Guitar37.java and you should turn them in electronically
+from the “Homework” tab on the class web page. Make sure you turn in the correct GuitarString
+file (not the testing one) and turn in your reflection.txt file<o:p></o:p></span></p>
+
+</div>
+
+
+
+
+</body></html>
